@@ -19,8 +19,9 @@ const app = new App({
 
 // Listens to incoming messages that contain the ":wave:" emoji
 app.message(':wave:', sayHelloThere);
-app.message('Hello', sayHelloThere);
+app.message('!Hello', sayHelloThere);
 
+// Echos the input of the user
 app.message('!echo', callingEchoBase);
 
 // Gets help data for each supported command
