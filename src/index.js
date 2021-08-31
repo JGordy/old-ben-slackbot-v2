@@ -19,7 +19,7 @@ const app = new App({
 
 // Listens to incoming messages that contain the ":wave:" emoji
 app.message(':wave:', sayHelloThere);
-app.message('!Hello', sayHelloThere);
+app.message('!hello', sayHelloThere);
 
 // Echos the input of the user
 app.message('!echo', callingEchoBase);
