@@ -3,8 +3,9 @@ require('dotenv').config();
 const { App } = require("@slack/bolt");
 
 const {
+    callingEchoBase,
     getHelp,
-    sayHello,
+    sayHelloThere,
     tellDadJoke,
 } = require('./commands');
 
@@ -22,7 +23,9 @@ const app = new App({
 // });
 
 // Listens to incoming messages that contain the ":wave:" emoji
-app.message(':wave:', sayHello);
+app.message(':wave:', sayHelloThere);
+
+app.message('!echo', callingEchoBase);
 
 // Gets help data for each supported command
 app.message('!help', getHelp);

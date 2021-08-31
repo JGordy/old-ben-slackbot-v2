@@ -1,9 +1,11 @@
+const callingEchoBase = require('./callingEchoBase');
 const getHelp = require('./getHelp');
-const sayHello = require('./sayHello');
+const sayHelloThere = require('./sayHelloThere');
 const tellDadJoke = require('./tellDadJoke');
 
 module.exports = {
+    callingEchoBase,
     getHelp,
-    sayHello,
+    sayHelloThere,
     tellDadJoke,
 };

@@ -20,7 +20,7 @@ const sayHello = async ({ message, say }) => {
                 // }
             }
         ],
-        text: `Hey there <@${message.user}>!`
+        text: `Hello there <@${message.user}>!`
     });
 };
 
