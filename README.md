@@ -1,6 +1,6 @@
 # Old-Ben
 
-A slackbot with the personality of everyones favorite old Jedi Master Obi-Wan Kenobi. Powered by Node.js, Express, and the Force.
+A slackbot with the personality of everyones favorite old Jedi Master Obi-Wan Kenobi. Powered by Node.js, Slack's Bolt API, and the Force.
 
 ## Loves
 
@@ -18,12 +18,10 @@ A slackbot with the personality of everyones favorite old Jedi Master Obi-Wan Ke
 ## Tech Used
 
 - Node.js
-- Slack API RTM Client (Real Time Messenger)
-- Slack API Web Client (For Interactive Chat)
+- Slack Bolt API
 
 ## Dependencies
 
-- @slack/client
+- @slack/bolt
 - dotenv
-- express
 - node-fetch
