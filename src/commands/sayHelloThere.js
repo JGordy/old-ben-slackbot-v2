@@ -1,5 +1,13 @@
+const obiWanGifs = require('../consts/gifs');
+
+const helloThereGifs = ['helloThereYoung', 'helloThereOld', 'mustacheYoung', 'mustacheOld', 'onEdge', 'joyful', 'what', 'nope'];
 
 const sayHello = async ({ message, say }) => {
+
+    await say(`Hello there <@${message.user}>!`)
+
+    const index = Math.floor(Math.random() * helloThereGifs.length);
+
     await say({
         blocks: [
             {
@@ -9,13 +17,12 @@ const sayHello = async ({ message, say }) => {
                     "text": 'Hello there',
                     "emoji": true
                 },
-                "image_url": "https://media.giphy.com/media/3ornk57KwDXf81rjWM/giphy.gif?cid=ecf05e47184rp3s6zrxmehgic5cby3e9bi0mqg3mvc55wt19&rid=giphy.gif&ct=g",
+                "image_url": obiWanGifs[helloThereGifs[index]],
                 "alt_text": "Obi-Wan Hello There",
             }
         ],
     });
 
-    await say(`Hello there <@${message.user}>!`)
 };
 
 module.exports = sayHello;
