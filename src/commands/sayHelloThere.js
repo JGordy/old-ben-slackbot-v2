@@ -1,27 +1,21 @@
 
 const sayHello = async ({ message, say }) => {
-    // say() sends a message to the channel where the event was triggered
-    // await say(`Hey there <@${message.user}>!`);
     await say({
         blocks: [
             {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": `Hey there <@${message.user}>!`
+                "type": "image",
+                "title": {
+                    "type": "plain_text",
+                    "text": 'Hello there',
+                    "emoji": true
                 },
-                // "accessory": {
-                //     "type": "button",
-                //     "text": {
-                //         "type": "plain_text",
-                //         "text": "Click Me"
-                //     },
-                //     "action_id": "button_click"
-                // }
+                "image_url": "https://media.giphy.com/media/3ornk57KwDXf81rjWM/giphy.gif?cid=ecf05e47184rp3s6zrxmehgic5cby3e9bi0mqg3mvc55wt19&rid=giphy.gif&ct=g",
+                "alt_text": "Obi-Wan Hello There",
             }
         ],
-        text: `Hello there <@${message.user}>!`
     });
+
+    await say(`Hello there <@${message.user}>!`)
 };
 
 module.exports = sayHello;
