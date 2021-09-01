@@ -3,6 +3,8 @@ require('dotenv').config();
 const { App } = require("@slack/bolt");
 
 const {
+    openFeatureModal,
+    handleFeatureSubmit,
     callingEchoBase,
     getHelp,
     getScene,
@@ -35,5 +37,9 @@ app.message(':clapper:', getScene);
 // Tells jokes only a dad could love
 app.message('!dadjoke', tellDadJoke);
 // app.message('!dj', tellDadJoke);
+
+// Adds new features as a Github issue on specified repo
+app.command('/add-feature', openFeatureModal);
+app.view('add-feature-view', handleFeatureSubmit);
 
 module.exports = app;
