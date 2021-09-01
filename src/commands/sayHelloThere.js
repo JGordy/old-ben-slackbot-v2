@@ -1,4 +1,4 @@
-const obiWanGifs = require('../consts/gifs');
+const obiWanGifs = require('../constants/gifs');
 
 const helloThereGifs = ['helloThereYoung', 'helloThereOld', 'mustacheYoung', 'mustacheOld', 'onEdge', 'joyful', 'what', 'nope'];
 

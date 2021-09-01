@@ -1,4 +1,4 @@
-const obiWanGifs = require('../consts/gifs');
+const obiWanGifs = require('../constants/gifs');
 
 const getScene = async ({ message, say }) => {
     const gifKeys = Object.keys(obiWanGifs);
