@@ -1,9 +1,11 @@
 const fetchDadJoke = require('./fetchDadJoke');
-const { createIssue, getUserData, getRepo } = require('./fetchGithub');
+const { createIssue, getUserData, getRepo, getRepoLabels } = require('./fetchGithub');
 
 module.exports = {
-    createIssue,
     fetchDadJoke,
+    // Github related requests
+    createIssue,
     getRepo,
+    getRepoLabels,
     getUserData,
 };

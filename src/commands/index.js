@@ -3,12 +3,17 @@ const getHelp = require('./getHelp');
 const getScene = require('./getScene');
 const sayHelloThere = require('./sayHelloThere');
 const tellDadJoke = require('./tellDadJoke');
-const { openFeatureModal, handleFeatureSubmit } = require('./addNewFeature');
 const sendError = require('./sendError');
+const {
+    openFeatureModal,
+    handleFeatureSubmit,
+    handleAddLabelField,
+} = require('./addNewFeature');
 
 module.exports = {
     openFeatureModal,
     handleFeatureSubmit,
+    handleAddLabelField,
     callingEchoBase,
     getHelp,
     getScene,

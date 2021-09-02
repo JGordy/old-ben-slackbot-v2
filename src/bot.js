@@ -4,6 +4,7 @@ const { App } = require("@slack/bolt");
 
 const {
     openFeatureModal,
+    handleAddLabelField,
     handleFeatureSubmit,
     callingEchoBase,
     getHelp,
@@ -40,6 +41,7 @@ app.message('!dadjoke', tellDadJoke);
 
 // Adds new features as a Github issue on specified repo
 app.command('/add-feature', openFeatureModal);
+app.action('repo_select_input', handleAddLabelField);
 app.view('add-feature-view', handleFeatureSubmit);
 
 module.exports = app;

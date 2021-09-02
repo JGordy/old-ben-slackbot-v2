@@ -12,6 +12,12 @@ const getRepo = ({ owner, repo }) => octokit.rest.repos.get({
     repo,
 });
 
+// List labels for a repository
+const getRepoLabels = ({ owner, repo }) => octokit.rest.issues.listLabelsForRepo({
+    owner,
+    repo,
+});
+
 const createIssue = ({ repo, title, body, labels }) => {
     let owner = 'Generosity-Market';
 
@@ -31,5 +37,6 @@ const createIssue = ({ repo, title, body, labels }) => {
 module.exports = {
     createIssue,
     getRepo,
+    getRepoLabels,
     getUserData,
 };
